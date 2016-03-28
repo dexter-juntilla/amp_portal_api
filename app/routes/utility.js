@@ -10,6 +10,7 @@ Utilityserver.get = function(server, utility) {
 };
 
 Utilityserver.post = function(server, utility) {
+	server.post('/utility/generate/pdf', utility.generatePdf);
 };
 
 Utilityserver.put = function(server, utility) {

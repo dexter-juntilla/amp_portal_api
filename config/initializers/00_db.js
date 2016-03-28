@@ -7,8 +7,8 @@ module.exports = function(done) {
 		// open the rethink connection
 		function(callback) {
 			var credential = {
-				host: 	nconf.get('DB_SERVER'), 
-				port: 	nconf.get('DB_PORT'), 
+				host: 	nconf.get('DB_SERVER'),
+				port: 	nconf.get('DB_PORT'),
 				db: 	nconf.get('DB_NAME')
 			}
 
@@ -25,32 +25,32 @@ module.exports = function(done) {
 				}
 			})
 		},
-		// check if the database already exists 
+		// check if the database already exists
 		function(connection, callback) {
 		    r.dbList().run(connection, function(err, result) {
 		    	if(err)
 		    	{
 					winston.error('Initializers DB [dbList] [Error: %s]', util.inspect(err))
-					callback(err, null);		    		
+					callback(err, null);
 		    	}
 		    	else
 		    	{
 					if(result && result.toString().indexOf(nconf.get('DB_NAME')) > -1)
 					{
-						winston.info('Initializers DB [Database already exists]'); 
+						winston.info('Initializers DB [Database already exists]');
 						callback(null, connection);
 					}
 					else
 					{
-						winston.info('Initializers DB [Database not exists]'); 
+						winston.info('Initializers DB [Database not exists]');
 						r.dbCreate(nconf.get('DB_NAME')).run(connection, function(err, result){
 					    	if(err)
 					    	{
 								winston.error('Initializers DB [dbCreate] [Error: %s]', util.inspect(err))
-								callback(err, null);		    		
+								callback(err, null);
 					    	}
 					    	else
-					    		callback(null, connection);						 
+					    		callback(null, connection);
 						});
 					}
 		    	}

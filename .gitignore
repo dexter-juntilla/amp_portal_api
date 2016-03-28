@@ -17,3 +17,8 @@ node_modules
 .DS_Store
 
 !.gitignore
+
+########################
+# folders
+########################
+documents/*
