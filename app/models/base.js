@@ -141,10 +141,10 @@ BaseModel.prepareHtmlBody = function(file, params, callback) {
 	});
 }
 
-BaseModel.generatePDF = function(html, filename, callback) {
+BaseModel.generatePDF = function(web_address, html, filename, callback) {
 	winston.info('BaseModel - generatePDF [Params: %s]', html, filename);
 
-	var html_path = nconf.get('WEB_ADDRESS') + html;
+	var html_path = web_address + html;
 
 	var pdf_folder = path.join(process.cwd(), nconf.get('DOCUMENT_FOLDER').replace('.', ''));
 	var pdf_path = path.join(pdf_folder, filename);

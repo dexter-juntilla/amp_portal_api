@@ -9,5 +9,5 @@
 	"BASIC_PASSWORD": "F0nch3rt0",
 	"TEMPLATE_FOLDER":"./template",
 	"DOCUMENT_FOLDER":"./documents/",
-	"WEB_ADDRESS":"http://10.1.1.154:9000"
+	"WEB_ADDRESS":"http://10.1.1.154:5000"
 }

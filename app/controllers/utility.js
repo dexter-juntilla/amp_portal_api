@@ -11,7 +11,7 @@ UtilityController.serviceAlive = function(req, res) {
 UtilityController.generatePdf = function(req, res) {
   winston.info('UtilityController - generatePdf [Params: %s]', util.inspect(req.params));
 
-  Model.generatePDF(req.params.html, req.params.filename, function(err, response) {
+  Model.generatePDF(req.params.web_address, req.params.html, req.params.filename, function(err, response) {
     if(err)
     {
       winston.error('UtilityController - generatePdf [generatePDF] [Error: %s]', util.inspect(err));

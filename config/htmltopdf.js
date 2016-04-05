@@ -17,15 +17,15 @@ else
     {
         size = system.args[3].split('*');
     }
-    page.paperSize = {
-        format: "Letter",
-        orientation: 'portrait',
-        margin: {
-            left: "0.5in",
-            top: "0.5in",
-            right: "0.5in"
-        }
-    };
+    // page.paperSize = {
+    //     format: "Letter",
+    //     orientation: 'portrait',
+    //     margin: {
+    //         left: "0.5in",
+    //         top: "0.5in",
+    //         right: "0.5in"
+    //     }
+    // };
     page.viewportSize = {
         width: 1280,
         height: 2400
