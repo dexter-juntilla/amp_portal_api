@@ -21,7 +21,10 @@ UtilityController.generatePdf = function(req, res) {
     {
       if(response.success)
       {
-        res.send(200, {pdf_path:response.file_path})
+        res.send(200, {
+          pdf_path:response.file_path,
+          auth_id:req.params.auth_id
+        })
       }
     }
   });
