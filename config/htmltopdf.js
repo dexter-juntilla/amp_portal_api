@@ -17,21 +17,14 @@ else
     {
         size = system.args[3].split('*');
     }
-    // page.paperSize = {
-    //     format: "Letter",
-    //     orientation: 'portrait',
-    //     margin: {
-    //         left: "0.5in",
-    //         top: "0.5in",
-    //         right: "0.5in"
-    //     }
-    // };
+    page.paperSize = {
+        format: "Letter",
+        orientation: 'portrait'
+    };
     page.viewportSize = {
         width: 1280,
-        height: 2400
+        height: 1650
     };
-    // if (system.args.length > 4) {
-    // }
     page.zoomFactor = 1
     page.open(address, function(status) {
         if (status !== 'success')
