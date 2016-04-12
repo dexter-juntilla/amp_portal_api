@@ -19,7 +19,7 @@ if (system.args.length < 3 || system.args.length > 5) {
     //     format: "Letter", 
     //     orientation: 'portrait'
     // };
-    page.viewportSize = { width: 1024, height: 768 };
+    page.viewportSize = { width: 1275, height: 1650 };
     page.zoomFactor = 1;
     page.open(address, function (status) {
         console.log('PDF :', status);
