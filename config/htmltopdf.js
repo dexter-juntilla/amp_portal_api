@@ -15,11 +15,11 @@ if (system.args.length < 3 || system.args.length > 5) {
     }
     footer = system.args[3];
 
-    page.paperSize = { 
-        format: "Letter", 
-        orientation: 'portrait'
-    };
-    page.viewportSize = { width: 1280, height: 2300 };
+    // page.paperSize = { 
+    //     format: "Letter", 
+    //     orientation: 'portrait'
+    // };
+    page.viewportSize = { width: 1024, height: 768 };
     page.zoomFactor = 1;
     page.open(address, function (status) {
         console.log('PDF :', status);
