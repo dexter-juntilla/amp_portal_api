@@ -20,7 +20,7 @@ if (system.args.length < 3 || system.args.length > 5) {
         orientation: 'portrait'
     };
     
-    // page.viewportSize = { width: 1275, height: 1650 };
+    page.viewportSize = { width: 2550, height: 3300 };
     page.zoomFactor = 1;
     page.open(address, function (status) {
         console.log('PDF :', status);
